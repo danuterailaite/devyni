@@ -1,0 +1,7 @@
+.settings
+applications
+docs
+bin
+system/tests/
+.buildpath
+.project
