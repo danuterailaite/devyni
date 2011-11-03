@@ -5,6 +5,7 @@
 */
 require_once 'constants.php';
 require_once 'functions.php';
+require_once SYSTEM . 'errors/de_exception.php';
 
 /**
  * Pagrindinis sistemos komponentas. Apdoroją komponentų ryšius ir programos vykdymo seką. Galimo
@@ -60,6 +61,12 @@ class Main {
 	 * @return bool true
 	 */
 	public static function webApp ($config = null) {
+		/*
+		 * Nustatomi kelias iki dabartinės programos aplankų.
+		 */
+		defined('DE_ENV_MODULE') or define ('DE_ENV_MODULE', 'default');
+		define ('APP', APPLICATIONS . DE_ENV_MODULE . DS);
+
 
 	}
 	// }}}
