@@ -19,6 +19,11 @@
 
 class Main {
 
+	/**
+	 * Singleton objektas.
+	 *
+	 * @var Main
+	 */
 	public $instance = null;
 
 	// {{{ getInstance()
@@ -29,8 +34,55 @@ class Main {
 	 * @static
 	 * @return Main Šio komponento objektas.
 	 */
-	public static function getInstance() {
+	public static function getInstance () {
 
 	}
 	// }}}
+
+	// {{{ webApp()
+	/**
+	 * Inicijuojama web programa. Sistema pradeda darbą ir naudoja webApp reikalingus komponentus.
+	 *
+	 * @access public
+	 * @static
+	 * @param array $config Programos nustatymai, jei reikalingi nestandartiniai.
+	 * @return bool true
+	 */
+	public static function webApp ($config = null) {
+
+	}
+	// }}}
+
+	// {{{ dispatch()
+	/**
+	 * Tolesnis vykdymas perduodamas MVC komponentams. II-oji programos vykdymo stadija.
+	 *
+	 * @access public
+	 * @static
+	 * @param string $controller Kontrolieriaus pavadinimas.
+	 * @param string $action Veiksmo pavadinimas.
+	 * @param array $params Papildomi parametrai.
+	 * @return
+	 */
+	public static function dispatch ($controller, $action, $params = array()) {
+
+	}
+	// }}}
+
+	// {{{ consoleApp()
+	/**
+	* Inicijuojama console programa. Sistema pradeda darbą ir naudoja consolei reikalingus
+	* komponentus.
+	*
+	* @access public
+	* @static
+	* @param array $config Programos nustatymai, jei reikalingi nestandartiniai.
+	* @return bool true
+	* @deprecated
+	*/
+	public static function consoleApp ($config = null) {
+		return true;
+	}
+	// }}}
+
 }
