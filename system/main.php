@@ -1,6 +1,12 @@
 <?php
 
 /**
+* Reikalingi papildomi konstantų aprašai ir visos reikalingos papildomos.
+*/
+require_once 'constants.php';
+require_once 'functions.php';
+
+/**
  * Pagrindinis sistemos komponentas. Apdoroją komponentų ryšius ir programos vykdymo seką.
  *
  * PHP version 5
@@ -23,8 +29,9 @@ class Main {
 	 * Singleton objektas.
 	 *
 	 * @var Main
+	 * @static
 	 */
-	public $instance = null;
+	public static $instance = null;
 
 	// {{{ getInstance()
 	/**
@@ -35,7 +42,10 @@ class Main {
 	 * @return Main Šio komponento objektas.
 	 */
 	public static function getInstance () {
-
+		if (!is_object(self::$instance)) {
+			self::$instance = new self;
+		}
+		return self::$instance;
 	}
 	// }}}
 
