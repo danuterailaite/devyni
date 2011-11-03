@@ -18,3 +18,13 @@
  * @since      0.1.1-alpha
  */
 
+/**
+ * Panaikina DS simbolius (standartiniu atveju "/") nuo abiejų eilutės galų.
+ *
+ * @access public
+ * @param string $str Apdorojama teksto eilutė.
+ * @return string Teksto eilutė panaikinus DS simboliu abiejuose galuose.
+ */
+function stripds ($str) {
+	return ltrim(rtrim($str, DS), DS);
+}
