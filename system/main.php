@@ -7,7 +7,8 @@ require_once 'constants.php';
 require_once 'functions.php';
 
 /**
- * Pagrindinis sistemos komponentas. Apdoroją komponentų ryšius ir programos vykdymo seką.
+ * Pagrindinis sistemos komponentas. Apdoroją komponentų ryšius ir programos vykdymo seką. Galimo
+ * dviejų tipų programos: webApp ir consoleApp.
  *
  * PHP version 5
  *
@@ -72,7 +73,7 @@ class Main {
 	 * @param string $controller Kontrolieriaus pavadinimas.
 	 * @param string $action Veiksmo pavadinimas.
 	 * @param array $params Papildomi parametrai.
-	 * @return
+	 * @return null
 	 */
 	public static function dispatch ($controller, $action, $params = array()) {
 
@@ -92,6 +93,20 @@ class Main {
 	*/
 	public static function consoleApp ($config = null) {
 		return true;
+	}
+	// }}}
+
+	// {{{ getVersion()
+	/**
+	 * Gražinama programos (karkaso) versija.
+	 *
+	 * @access public
+	 * @static
+	 * @return string Versijos numeris.
+	 */
+	public static function getVersion() {
+		$v = file_get_contents(SYSTEM . 'version');
+		return $v;
 	}
 	// }}}
 
