@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Visos sistemai reikalingos konstantos.
+ * Visai sistemai reikalingos konstantos.
  *
  * PHP version 5
  *
