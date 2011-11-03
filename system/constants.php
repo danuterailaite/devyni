@@ -58,9 +58,10 @@ define('DE_TYPE_FORBIDDEN', 		10014);
 /**
  * Pagrindinei programos aplankai.
  */
-define ('SYSTEM', realpath(__DIR__) . DS);
-define ('ROOT', dirname(SYSTEM) . DS);
-define ('APPLICATIONS', ROOT . 'applications' . DS);
-define ('TESTS', ROOT . 'tests' . DS);
-define ('BIN', ROOT . 'bin' . DS);
-define ('DOCS', ROOT . 'docs' . DS);
+define ('SYSTEM', 			realpath(__DIR__) . DS);
+define ('ROOT',		 		dirname(SYSTEM) . DS);
+define ('APPLICATIONS', 	ROOT . 'applications' . DS);
+define ('TESTS',			ROOT . 'tests' . DS);
+define ('BIN', 				ROOT . 'bin' . DS);
+define ('DOCS', 			ROOT . 'docs' . DS);
+
