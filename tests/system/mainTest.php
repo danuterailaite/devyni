@@ -17,8 +17,25 @@
  * @since      0.1.1-alpha
  */
 
+require_once SYSTEM . 'main.php';
+
 class MainTest extends PHPUnit_Framework_TestCase {
 
+	protected $_main = null;
 
+	public function setUp () {
+		$this->_main = Main::getInstance();
+	}
 
+	public function tearDown() {
+		unset($this->_main);
+	}
+
+	public function testGetInstance () {
+		$this->assertInstanceOf('Main', Main::getInstance());
+	}
+
+	public function testBootstrap() {
+
+	}
 }

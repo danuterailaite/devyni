@@ -17,3 +17,7 @@
  * @since      0.1.1-alpha
  */
 
+define ('DS', "/");
+define ('TESTS', realpath(__DIR__) . DS);
+define ('ROOT', dirname (TESTS) . DS);
+define ('SYSTEM', ROOT . 'system' . DS);
